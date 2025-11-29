@@ -1,0 +1,701 @@
+{
+  "Lease Agreement": {
+    "filename": "Lease-Agreement-Jinja2.docx",
+    "category": "Property",
+    "description": "Comprehensive lease/rent agreement for property rental",
+    "keywords": [
+      "lease",
+      "rent",
+      "rental",
+      "property",
+      "tenant",
+      "landlord"
+    ],
+    "fields": {
+      "location": {
+        "label": "Place where agreement is made",
+        "type": "text",
+        "required": true,
+        "example": "Mumbai"
+      },
+      "day": {
+        "label": "Day of agreement",
+        "type": "number",
+        "required": true,
+        "example": "15"
+      },
+      "month": {
+        "label": "Month of agreement",
+        "type": "text",
+        "required": true,
+        "example": "January"
+      },
+      "year": {
+        "label": "Year of agreement",
+        "type": "number",
+        "required": true,
+        "example": "2024"
+      },
+      "lessor_name": {
+        "label": "Landlord/Lessor full name",
+        "type": "text",
+        "required": true,
+        "example": "Mr. Rajesh Kumar"
+      },
+      "lessor_address": {
+        "label": "Landlord/Lessor address",
+        "type": "text",
+        "required": true,
+        "example": "123 MG Road, Mumbai 400001"
+      },
+      "lessee_name": {
+        "label": "Tenant/Lessee full name",
+        "type": "text",
+        "required": true,
+        "example": "Ms. Priya Sharma"
+      },
+      "lessee_address": {
+        "label": "Tenant/Lessee address",
+        "type": "text",
+        "required": true,
+        "example": "456 Park Street, Delhi 110001"
+      },
+      "property_address": {
+        "label": "Complete property address",
+        "type": "text",
+        "required": true,
+        "example": "Flat 302, Green Tower, Bandra West, Mumbai 400050"
+      },
+      "property_description": {
+        "label": "Detailed property description",
+        "type": "textarea",
+        "required": false,
+        "example": "2BHK apartment, 1200 sq ft, with parking"
+      },
+      "monthly_rent": {
+        "label": "Monthly rent amount (₹)",
+        "type": "number",
+        "required": true,
+        "example": "50000"
+      },
+      "lease_duration_years": {
+        "label": "Lease duration in years",
+        "type": "number",
+        "required": true,
+        "example": "1"
+      },
+      "lease_start_date": {
+        "label": "Lease start date",
+        "type": "date",
+        "required": true,
+        "example": "2024-01-01"
+      },
+      "payment_day": {
+        "label": "Rent payment day of month",
+        "type": "number",
+        "required": true,
+        "example": "5"
+      },
+      "first_payment_date": {
+        "label": "First rent payment date",
+        "type": "date",
+        "required": true,
+        "example": "2024-01-05"
+      },
+      "late_fee_rate": {
+        "label": "Late fee interest rate (%)",
+        "type": "number",
+        "required": false,
+        "example": "18"
+      },
+      "arrears_months": {
+        "label": "Months of arrears before termination",
+        "type": "number",
+        "required": false,
+        "example": "2"
+      },
+      "notice_period": {
+        "label": "Notice period for termination (months)",
+        "type": "number",
+        "required": false,
+        "example": "2"
+      },
+      "lessor_witness_1": {
+        "label": "Lessor Witness 1 name",
+        "type": "text",
+        "required": false,
+        "example": "Mr. Amit Patel"
+      },
+      "lessor_witness_2": {
+        "label": "Lessor Witness 2 name",
+        "type": "text",
+        "required": false,
+        "example": "Mr. Suresh Reddy"
+      },
+      "lessee_witness_1": {
+        "label": "Lessee Witness 1 name",
+        "type": "text",
+        "required": false,
+        "example": "Ms. Neha Gupta"
+      },
+      "lessee_witness_2": {
+        "label": "Lessee Witness 2 name",
+        "type": "text",
+        "required": false,
+        "example": "Mr. Vikram Singh"
+      }
+    }
+  },
+  "Legal Notice for Recovery of Money": {
+    "filename": "Legal-Notice-for-Recovery-of-Money-Jinja2.docx",
+    "category": "Legal Notice",
+    "description": "Legal notice for recovery of outstanding money/payment",
+    "keywords": [
+      "legal notice",
+      "recovery",
+      "money",
+      "payment",
+      "debt",
+      "outstanding"
+    ],
+    "fields": {
+      "notice_date_day": {
+        "label": "Day of notice",
+        "type": "number",
+        "required": true,
+        "example": "15"
+      },
+      "notice_date_month": {
+        "label": "Month of notice",
+        "type": "text",
+        "required": true,
+        "example": "January"
+      },
+      "notice_date_year": {
+        "label": "Year of notice",
+        "type": "number",
+        "required": true,
+        "example": "2025"
+      },
+      "recipient_name": {
+        "label": "Recipient's full name",
+        "type": "text",
+        "required": true,
+        "example": "Mr. Rajesh Kumar"
+      },
+      "recipient_address": {
+        "label": "Recipient's complete address",
+        "type": "text",
+        "required": true,
+        "example": "123 MG Road, Mumbai 400001"
+      },
+      "client_name": {
+        "label": "Client's company/individual name",
+        "type": "text",
+        "required": true,
+        "example": "ABC Enterprises Pvt. Ltd."
+      },
+      "client_designation": {
+        "label": "Client's designation/capacity",
+        "type": "text",
+        "required": false,
+        "example": "Managing Director"
+      },
+      "client_full_name": {
+        "label": "Client's full legal name",
+        "type": "text",
+        "required": true,
+        "example": "M/s ABC Enterprises Pvt. Ltd."
+      },
+      "business_nature": {
+        "label": "Nature of business",
+        "type": "text",
+        "required": true,
+        "example": "manufacturing and supply of electronics"
+      },
+      "business_product": {
+        "label": "Product/Service provided",
+        "type": "text",
+        "required": true,
+        "example": "electronic components"
+      },
+      "principal_amount": {
+        "label": "Principal outstanding amount (₹)",
+        "type": "number",
+        "required": true,
+        "example": "250000"
+      },
+      "interest_rate": {
+        "label": "Interest rate (% per annum)",
+        "type": "number",
+        "required": true,
+        "example": "12"
+      },
+      "interest_amount": {
+        "label": "Interest amount (₹)",
+        "type": "number",
+        "required": true,
+        "example": "25000"
+      },
+      "total_payable": {
+        "label": "Total amount payable including interest (₹)",
+        "type": "number",
+        "required": true,
+        "example": "275000"
+      },
+      "notice_fee": {
+        "label": "Legal notice fee (₹)",
+        "type": "number",
+        "required": false,
+        "example": "5000"
+      }
+    }
+  },
+  "Legal Notice for Non-Payment of Invoice": {
+    "filename": "Legal-Notice-for-Non-Payment-of-Invoice-Jinja2.docx",
+    "category": "Legal Notice",
+    "description": "Legal notice for non-payment of invoices",
+    "keywords": [
+      "legal notice",
+      "invoice",
+      "non-payment",
+      "bill",
+      "payment due"
+    ],
+    "fields": {
+      "notice_date_day": {
+        "label": "Day of notice",
+        "type": "number",
+        "required": true,
+        "example": "15"
+      },
+      "notice_date_month": {
+        "label": "Month of notice",
+        "type": "text",
+        "required": true,
+        "example": "January"
+      },
+      "notice_date_year": {
+        "label": "Year of notice",
+        "type": "number",
+        "required": true,
+        "example": "2025"
+      },
+      "recipient_name": {
+        "label": "Recipient's full name",
+        "type": "text",
+        "required": true,
+        "example": "Mr. Rajesh Kumar"
+      },
+      "recipient_address": {
+        "label": "Recipient's complete address",
+        "type": "text",
+        "required": true,
+        "example": "123 MG Road, Mumbai 400001"
+      },
+      "client_name": {
+        "label": "Client's company/individual name",
+        "type": "text",
+        "required": true,
+        "example": "ABC Enterprises Pvt. Ltd."
+      },
+      "client_designation": {
+        "label": "Client's designation/capacity",
+        "type": "text",
+        "required": false,
+        "example": "Managing Director"
+      },
+      "client_full_name": {
+        "label": "Client's full legal name",
+        "type": "text",
+        "required": true,
+        "example": "M/s ABC Enterprises Pvt. Ltd."
+      },
+      "business_nature": {
+        "label": "Nature of business",
+        "type": "text",
+        "required": true,
+        "example": "manufacturing and supply of electronics"
+      },
+      "business_product": {
+        "label": "Product/Service provided",
+        "type": "text",
+        "required": true,
+        "example": "electronic components"
+      },
+      "principal_amount": {
+        "label": "Principal outstanding amount (₹)",
+        "type": "number",
+        "required": true,
+        "example": "250000"
+      },
+      "interest_rate": {
+        "label": "Interest rate (% per annum)",
+        "type": "number",
+        "required": true,
+        "example": "12"
+      },
+      "interest_amount": {
+        "label": "Interest amount (₹)",
+        "type": "number",
+        "required": true,
+        "example": "25000"
+      },
+      "total_payable": {
+        "label": "Total amount payable including interest (₹)",
+        "type": "number",
+        "required": true,
+        "example": "275000"
+      },
+      "notice_fee": {
+        "label": "Legal notice fee (₹)",
+        "type": "number",
+        "required": false,
+        "example": "5000"
+      }
+    }
+  },
+  "Legal Notice for Recovery of Friendly Loan": {
+    "filename": "Legal-Notice-for-Recovery-of-Friendly-Loan-Jinja2.docx",
+    "category": "Legal Notice",
+    "description": "Legal notice for recovery of friendly/personal loan",
+    "keywords": [
+      "legal notice",
+      "loan",
+      "friendly loan",
+      "personal loan",
+      "recovery"
+    ],
+    "fields": {
+      "notice_date_day": {
+        "label": "Day of notice",
+        "type": "number",
+        "required": true,
+        "example": "15"
+      },
+      "notice_date_month": {
+        "label": "Month of notice",
+        "type": "text",
+        "required": true,
+        "example": "January"
+      },
+      "notice_date_year": {
+        "label": "Year of notice",
+        "type": "number",
+        "required": true,
+        "example": "2025"
+      },
+      "recipient_name": {
+        "label": "Recipient's full name",
+        "type": "text",
+        "required": true,
+        "example": "Mr. Rajesh Kumar"
+      },
+      "recipient_address": {
+        "label": "Recipient's complete address",
+        "type": "text",
+        "required": true,
+        "example": "123 MG Road, Mumbai 400001"
+      },
+      "client_name": {
+        "label": "Client's company/individual name",
+        "type": "text",
+        "required": true,
+        "example": "ABC Enterprises Pvt. Ltd."
+      },
+      "client_designation": {
+        "label": "Client's designation/capacity",
+        "type": "text",
+        "required": false,
+        "example": "Managing Director"
+      },
+      "client_full_name": {
+        "label": "Client's full legal name",
+        "type": "text",
+        "required": true,
+        "example": "M/s ABC Enterprises Pvt. Ltd."
+      },
+      "business_nature": {
+        "label": "Nature of business",
+        "type": "text",
+        "required": true,
+        "example": "manufacturing and supply of electronics"
+      },
+      "business_product": {
+        "label": "Product/Service provided",
+        "type": "text",
+        "required": true,
+        "example": "electronic components"
+      },
+      "principal_amount": {
+        "label": "Principal outstanding amount (₹)",
+        "type": "number",
+        "required": true,
+        "example": "250000"
+      },
+      "interest_rate": {
+        "label": "Interest rate (% per annum)",
+        "type": "number",
+        "required": true,
+        "example": "12"
+      },
+      "interest_amount": {
+        "label": "Interest amount (₹)",
+        "type": "number",
+        "required": true,
+        "example": "25000"
+      },
+      "total_payable": {
+        "label": "Total amount payable including interest (₹)",
+        "type": "number",
+        "required": true,
+        "example": "275000"
+      },
+      "notice_fee": {
+        "label": "Legal notice fee (₹)",
+        "type": "number",
+        "required": false,
+        "example": "5000"
+      }
+    }
+  },
+  "Family Trust Deed": {
+    "filename": "Family-Trust-Deed-Jinja2.docx",
+    "category": "Trust",
+    "description": "Deed for creating a family trust",
+    "keywords": [
+      "trust",
+      "family trust",
+      "settlor",
+      "trustee",
+      "family property"
+    ],
+    "fields": {
+      "trust_day": {
+        "label": "Day of trust deed",
+        "type": "number",
+        "required": true,
+        "example": "15"
+      },
+      "trust_month": {
+        "label": "Month of trust deed",
+        "type": "text",
+        "required": true,
+        "example": "March"
+      },
+      "trust_year": {
+        "label": "Year of trust deed",
+        "type": "number",
+        "required": true,
+        "example": "2025"
+      },
+      "trust_name": {
+        "label": "Name of the trust",
+        "type": "text",
+        "required": true,
+        "example": "Kumar Family Trust"
+      },
+      "trust_location": {
+        "label": "Location of trust registration",
+        "type": "text",
+        "required": true,
+        "example": "Mumbai"
+      },
+      "deity_name": {
+        "label": "Name of the deity (if religious trust)",
+        "type": "text",
+        "required": false,
+        "example": "Lord Ganesha"
+      },
+      "settlor_1_name": {
+        "label": "First Settlor's full name",
+        "type": "text",
+        "required": true,
+        "example": "Mr. Ramesh Kumar"
+      },
+      "settlor_2_name": {
+        "label": "Second Settlor's full name",
+        "type": "text",
+        "required": false,
+        "example": "Mrs. Sunita Kumar"
+      },
+      "settlor_3_name": {
+        "label": "Third Settlor's full name",
+        "type": "text",
+        "required": false,
+        "example": "Mr. Vikram Kumar"
+      },
+      "settlor_4_name": {
+        "label": "Fourth Settlor's full name",
+        "type": "text",
+        "required": false,
+        "example": "Mrs. Anjali Kumar"
+      },
+      "settlor_5_name": {
+        "label": "Fifth Settlor's full name",
+        "type": "text",
+        "required": false,
+        "example": "Mr. Rajesh Kumar"
+      },
+      "settlor_6_name": {
+        "label": "Sixth Settlor's full name",
+        "type": "text",
+        "required": false,
+        "example": "Mrs. Kavita Kumar"
+      },
+      "settlor_7_name": {
+        "label": "Seventh Settlor's full name",
+        "type": "text",
+        "required": false,
+        "example": "Mr. Suresh Kumar"
+      },
+      "settlor_city": {
+        "label": "City where settlors reside",
+        "type": "text",
+        "required": true,
+        "example": "Kolkata"
+      },
+      "brother_1_name": {
+        "label": "First brother's full name",
+        "type": "text",
+        "required": false,
+        "example": "Mr. Amit Kumar"
+      },
+      "brother_2_name": {
+        "label": "Second brother's full name",
+        "type": "text",
+        "required": false,
+        "example": "Mr. Vijay Kumar"
+      },
+      "brother_3_name": {
+        "label": "Third brother's full name",
+        "type": "text",
+        "required": false,
+        "example": "Mr. Sunil Kumar"
+      },
+      "trustee_1_name": {
+        "label": "First Trustee's full name",
+        "type": "text",
+        "required": true,
+        "example": "Mr. Amit Sharma"
+      },
+      "trustee_2_name": {
+        "label": "Second Trustee's full name",
+        "type": "text",
+        "required": false,
+        "example": "Mrs. Priya Sharma"
+      },
+      "trustee_3_name": {
+        "label": "Third Trustee's full name",
+        "type": "text",
+        "required": false,
+        "example": "Mr. Rahul Verma"
+      },
+      "initial_fund_amount": {
+        "label": "Initial fund amount for the trust (₹)",
+        "type": "number",
+        "required": true,
+        "example": "100000"
+      },
+      "property_address": {
+        "label": "Complete property address",
+        "type": "text",
+        "required": true,
+        "example": "123 Park Street"
+      },
+      "property_village": {
+        "label": "Village/locality of property",
+        "type": "text",
+        "required": true,
+        "example": "Park Street Area"
+      },
+      "property_district": {
+        "label": "District of property",
+        "type": "text",
+        "required": true,
+        "example": "Kolkata"
+      },
+      "property_state": {
+        "label": "State of property",
+        "type": "text",
+        "required": true,
+        "example": "West Bengal"
+      }
+    }
+  },
+  "NDA": {
+    "filename": "NDA-Jinja2-Fixed.docx",
+    "category": "Business",
+    "description": "Non-Disclosure Agreement for protecting confidential information between parties",
+    "keywords": [
+      "nda",
+      "non-disclosure",
+      "confidentiality",
+      "agreement",
+      "secrecy",
+      "proprietary"
+    ],
+    "fields": {
+      "day": {
+        "label": "Day of agreement",
+        "type": "number",
+        "required": true,
+        "example": "15"
+      },
+      "month": {
+        "label": "Month of agreement",
+        "type": "text",
+        "required": true,
+        "example": "January"
+      },
+      "year": {
+        "label": "Year of agreement",
+        "type": "number",
+        "required": true,
+        "example": "2025"
+      },
+      "party_1_name": {
+        "label": "First Party Full Name",
+        "type": "text",
+        "required": true,
+        "example": "ABC Technologies Pvt. Ltd."
+      },
+      "party_1_address": {
+        "label": "First Party Address",
+        "type": "text",
+        "required": true,
+        "example": "123 Business Park, Sector 18, Gurugram, Haryana 122001"
+      },
+      "party_2_name": {
+        "label": "Second Party (Customer) Full Name",
+        "type": "text",
+        "required": true,
+        "example": "XYZ Enterprises Ltd."
+      },
+      "party_2_address": {
+        "label": "Second Party Address",
+        "type": "text",
+        "required": true,
+        "example": "456 Corporate Tower, MG Road, Bangalore, Karnataka 560001"
+      },
+      "proposed_transaction_details": {
+        "label": "Details of Proposed Transaction/Business Purpose",
+        "type": "text",
+        "required": true,
+        "example": "exploring potential collaboration in software development and technology consulting"
+      },
+      "termination_years": {
+        "label": "Years after termination of binding agreement",
+        "type": "number",
+        "required": true,
+        "example": "2"
+      },
+      "expiry_years": {
+        "label": "Years after expiry of binding agreement",
+        "type": "number",
+        "required": true,
+        "example": "3"
+      }
+    }
+  }
+}

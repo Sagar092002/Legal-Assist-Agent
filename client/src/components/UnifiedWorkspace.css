@@ -1,0 +1,402 @@
+/* Unified Workspace - Harvey.ai Style Split Screen */
+
+.unified-workspace {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Header */
+.workspace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.workspace-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.workspace-logo {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workspace-logo svg {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.workspace-title h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0;
+}
+
+.workspace-stage {
+  font-size: 0.875rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.workspace-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.validation-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.validation-badge.valid {
+  background: #d4f4dd;
+  color: #22543d;
+}
+
+.validation-badge.needs_correction {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.validation-badge.invalid {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Workflow Indicator */
+.workflow-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.workflow-stage {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.workflow-stage.active {
+  opacity: 1;
+}
+
+.workflow-stage.current {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.workflow-stage.current .stage-number {
+  background: white;
+  color: #667eea;
+}
+
+.workflow-stage.current .stage-label {
+  color: white;
+}
+
+.stage-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.workflow-stage.active .stage-number {
+  background: #667eea;
+  color: white;
+}
+
+.stage-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.workflow-stage.active .stage-label {
+  color: #1e293b;
+}
+
+/* Main Content */
+.workspace-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Split Screen Layout */
+.workspace-split {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  transition: grid-template-columns 0.3s ease;
+}
+
+.workspace-split.assistant-collapsed {
+  grid-template-columns: 1fr 48px;
+}
+
+.workspace-panel {
+  background: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.workspace-editor-panel {
+  border-right: 1px solid #e2e8f0;
+}
+
+.workspace-assistant-panel {
+  position: relative;
+}
+
+.collapse-assistant-btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 80px;
+  background: #667eea;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 0 8px 8px 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.collapse-assistant-btn:hover {
+  background: #5568d3;
+  width: 52px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .workspace-split {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  .workspace-assistant-panel {
+    position: fixed;
+    right: 0;
+    top: 88px;
+    bottom: 0;
+    width: 400px;
+    z-index: 100;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .workspace-split.assistant-collapsed .workspace-assistant-panel {
+    transform: translateX(100%);
+  }
+  
+  .workflow-indicator {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .workspace-header {
+    padding: 1rem;
+  }
+  
+  .workspace-title h1 {
+    font-size: 1.25rem;
+  }
+  
+  .workflow-stage {
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .stage-label {
+    display: none;
+  }
+}
+
+/* Validation Loading Overlay */
+.validation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.validation-loader {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 500px;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loader-spinner {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+}
+
+.loader-spinner svg {
+  width: 100%;
+  height: 100%;
+}
+
+.loader-spinner circle {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 25;
+}
+
+.validation-loader h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.75rem;
+}
+
+.validation-loader p {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0 0 2rem;
+  line-height: 1.6;
+}
+
+.validation-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.validation-step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.validation-step.active {
+  background: linear-gradient(135deg, #ede9fe 0%, #e0e7ff 100%);
+}
+
+.step-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #6366f1;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+}
+
+.validation-step:not(.active) .step-icon {
+  background: #e2e8f0;
+  color: #94a3b8;
+  box-shadow: none;
+}
+
+.validation-step span:last-child {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.validation-step.active span:last-child {
+  color: #1e293b;
+}
+
+/* Blur effect when validating */
+.workspace-split.validating .workspace-panel {
+  filter: blur(3px);
+  pointer-events: none;
+  user-select: none;
+}
+

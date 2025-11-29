@@ -1,0 +1,419 @@
+{
+  "clauses": {
+    "emp_job_desc_01": {
+      "clause_id": "emp_job_desc_01",
+      "clause_text": "The Employee shall perform the duties of [Job Title] as assigned by the Employer from time to time.",
+      "clause_type": "Job Description",
+      "sub_type": null,
+      "legal_area": "Employment Law",
+      "jurisdiction": "India",
+      "risk_level": "low",
+      "enforceability": "high",
+      "applicable_acts": [
+        "Industrial Disputes Act, 1947",
+        "Shops and Establishments Act"
+      ],
+      "keywords": [
+        "job title",
+        "duties",
+        "responsibilities"
+      ],
+      "must_include": true,
+      "common_errors": [],
+      "best_practices": [
+        "Be specific about role",
+        "Allow flexibility for reasonable changes"
+      ],
+      "related_clauses": []
+    },
+    "emp_noncompete_01": {
+      "clause_id": "emp_noncompete_01",
+      "clause_text": "The Employee agrees not to engage in any business competitive with the Employer for a period of [X years] within [Territory] after termination of employment.",
+      "clause_type": "Non-Compete",
+      "sub_type": null,
+      "legal_area": "Employment Law",
+      "jurisdiction": "India",
+      "risk_level": "high",
+      "enforceability": "low",
+      "applicable_acts": [
+        "Indian Contract Act, 1872, Section 27"
+      ],
+      "keywords": [
+        "non-compete",
+        "restraint of trade",
+        "competitive business"
+      ],
+      "must_include": false,
+      "common_errors": [
+        "Making it too broad (likely unenforceable)",
+        "Not specifying reasonable duration (max 2 years)",
+        "Not specifying reasonable territory"
+      ],
+      "best_practices": [
+        "Keep duration reasonable (typically 6-12 months)",
+        "Limit to specific geography",
+        "Consider non-solicitation instead",
+        "Note: Section 27 of Indian Contract Act makes most non-competes void"
+      ],
+      "related_clauses": []
+    },
+    "emp_confidentiality_01": {
+      "clause_id": "emp_confidentiality_01",
+      "clause_text": "The Employee shall not disclose any Confidential Information of the Employer to third parties during or after employment.",
+      "clause_type": "Confidentiality",
+      "sub_type": null,
+      "legal_area": "Employment Law",
+      "jurisdiction": "India",
+      "risk_level": "medium",
+      "enforceability": "high",
+      "applicable_acts": [
+        "Indian Contract Act, 1872",
+        "Information Technology Act, 2000"
+      ],
+      "keywords": [
+        "confidentiality",
+        "trade secrets",
+        "proprietary information"
+      ],
+      "must_include": true,
+      "common_errors": [],
+      "best_practices": [
+        "Define 'Confidential Information' clearly",
+        "Specify exceptions (publicly available info)",
+        "Include post-employment obligations"
+      ],
+      "related_clauses": []
+    },
+    "lease_rent_01": {
+      "clause_id": "lease_rent_01",
+      "clause_text": "The Tenant shall pay monthly rent of INR [Amount] on or before the [X] day of each month.",
+      "clause_type": "Rent Payment",
+      "sub_type": null,
+      "legal_area": "Property Law",
+      "jurisdiction": "India",
+      "risk_level": "low",
+      "enforceability": "high",
+      "applicable_acts": [
+        "Transfer of Property Act, 1882"
+      ],
+      "keywords": [
+        "rent",
+        "payment",
+        "monthly",
+        "due date"
+      ],
+      "must_include": true,
+      "common_errors": [],
+      "best_practices": [
+        "Specify exact amount",
+        "Mention due date",
+        "Include late payment penalties",
+        "Specify payment method"
+      ],
+      "related_clauses": []
+    },
+    "lease_deposit_01": {
+      "clause_id": "lease_deposit_01",
+      "clause_text": "The Tenant shall pay a refundable security deposit of INR [Amount] (equivalent to [X] months' rent) at the time of signing this Agreement.",
+      "clause_type": "Security Deposit",
+      "sub_type": null,
+      "legal_area": "Property Law",
+      "jurisdiction": "India",
+      "risk_level": "medium",
+      "enforceability": "high",
+      "applicable_acts": [
+        "Transfer of Property Act, 1882"
+      ],
+      "keywords": [
+        "security deposit",
+        "refundable",
+        "deposit amount"
+      ],
+      "must_include": true,
+      "common_errors": [],
+      "best_practices": [
+        "Typically 2-3 months rent",
+        "Specify refund conditions",
+        "Mention deduction scenarios",
+        "Include timeline for refund after vacating"
+      ],
+      "related_clauses": []
+    },
+    "lease_lockin_01": {
+      "clause_id": "lease_lockin_01",
+      "clause_text": "This lease is subject to a lock-in period of [X] months, during which neither party may terminate the Agreement except for material breach.",
+      "clause_type": "Lock-in Period",
+      "sub_type": null,
+      "legal_area": "Property Law",
+      "jurisdiction": "India",
+      "risk_level": "medium",
+      "enforceability": "high",
+      "applicable_acts": [
+        "Transfer of Property Act, 1882",
+        "Indian Contract Act, 1872"
+      ],
+      "keywords": [
+        "lock-in",
+        "minimum tenure",
+        "termination restriction"
+      ],
+      "must_include": false,
+      "common_errors": [],
+      "best_practices": [
+        "Typically 6-11 months",
+        "Clearly define exceptions (material breach)",
+        "Specify penalties for early termination"
+      ],
+      "related_clauses": []
+    },
+    "nda_definition_01": {
+      "clause_id": "nda_definition_01",
+      "clause_text": "'Confidential Information' means all information disclosed by one party to the other, whether in writing, orally, or by any other means, including but not limited to technical data, business plans, customer lists, and financial information.",
+      "clause_type": "Definition of Confidential Information",
+      "sub_type": null,
+      "legal_area": "Contract Law",
+      "jurisdiction": "India",
+      "risk_level": "low",
+      "enforceability": "high",
+      "applicable_acts": [
+        "Indian Contract Act, 1872"
+      ],
+      "keywords": [
+        "confidential information",
+        "definition",
+        "scope"
+      ],
+      "must_include": true,
+      "common_errors": [],
+      "best_practices": [
+        "Be comprehensive but not overly broad",
+        "Include both written and oral information",
+        "Specify information marked as confidential"
+      ],
+      "related_clauses": []
+    },
+    "nda_exceptions_01": {
+      "clause_id": "nda_exceptions_01",
+      "clause_text": "Confidential Information does not include information that: (a) is publicly available; (b) was rightfully known prior to disclosure; (c) is independently developed; or (d) is required to be disclosed by law.",
+      "clause_type": "Exceptions to Confidentiality",
+      "sub_type": null,
+      "legal_area": "Contract Law",
+      "jurisdiction": "India",
+      "risk_level": "low",
+      "enforceability": "high",
+      "applicable_acts": [
+        "Indian Contract Act, 1872"
+      ],
+      "keywords": [
+        "exceptions",
+        "public information",
+        "legal disclosure"
+      ],
+      "must_include": true,
+      "common_errors": [],
+      "best_practices": [
+        "Include standard carve-outs",
+        "Address legal disclosure requirements",
+        "Consider public domain exception"
+      ],
+      "related_clauses": []
+    },
+    "gen_governing_law_01": {
+      "clause_id": "gen_governing_law_01",
+      "clause_text": "This Agreement shall be governed by and construed in accordance with the laws of India, and the parties submit to the exclusive jurisdiction of courts in [City], India.",
+      "clause_type": "Governing Law",
+      "sub_type": null,
+      "legal_area": "Contract Law",
+      "jurisdiction": "India",
+      "risk_level": "medium",
+      "enforceability": "high",
+      "applicable_acts": [
+        "Indian Contract Act, 1872",
+        "Code of Civil Procedure, 1908"
+      ],
+      "keywords": [
+        "governing law",
+        "jurisdiction",
+        "dispute resolution"
+      ],
+      "must_include": true,
+      "common_errors": [],
+      "best_practices": [
+        "Specify Indian law",
+        "Name specific city for jurisdiction",
+        "Consider arbitration clause as alternative"
+      ],
+      "related_clauses": []
+    },
+    "gen_arbitration_01": {
+      "clause_id": "gen_arbitration_01",
+      "clause_text": "Any dispute arising out of or in connection with this Agreement shall be resolved through arbitration in accordance with the Arbitration and Conciliation Act, 1996, with seat of arbitration in [City], India.",
+      "clause_type": "Arbitration",
+      "sub_type": null,
+      "legal_area": "Contract Law",
+      "jurisdiction": "India",
+      "risk_level": "low",
+      "enforceability": "high",
+      "applicable_acts": [
+        "Arbitration and Conciliation Act, 1996"
+      ],
+      "keywords": [
+        "arbitration",
+        "dispute resolution",
+        "adr"
+      ],
+      "must_include": false,
+      "common_errors": [],
+      "best_practices": [
+        "Specify seat of arbitration",
+        "Mention number of arbitrators",
+        "Consider costs allocation",
+        "Alternative to court litigation"
+      ],
+      "related_clauses": []
+    },
+    "gen_force_majeure_01": {
+      "clause_id": "gen_force_majeure_01",
+      "clause_text": "Neither party shall be liable for failure to perform its obligations due to Force Majeure events including but not limited to acts of God, war, pandemic, natural disasters, or government actions, provided notice is given within [X] days.",
+      "clause_type": "Force Majeure",
+      "sub_type": null,
+      "legal_area": "Contract Law",
+      "jurisdiction": "India",
+      "risk_level": "medium",
+      "enforceability": "high",
+      "applicable_acts": [
+        "Indian Contract Act, 1872, Section 56"
+      ],
+      "keywords": [
+        "force majeure",
+        "impossibility",
+        "frustration"
+      ],
+      "must_include": false,
+      "common_errors": [],
+      "best_practices": [
+        "List specific events (pandemic, natural disasters, etc.)",
+        "Include notice requirements",
+        "Specify consequences (suspension vs termination)",
+        "Set time limits"
+      ],
+      "related_clauses": []
+    }
+  },
+  "taxonomy": {
+    "Contract Law": {
+      "Employment Contracts": [
+        "Job Description",
+        "Compensation",
+        "Benefits",
+        "Working Hours",
+        "Leave Policy",
+        "Termination",
+        "Non-Compete",
+        "Confidentiality",
+        "Probation Period",
+        "Notice Period",
+        "Severance"
+      ],
+      "Service Agreements": [
+        "Scope of Services",
+        "Payment Terms",
+        "Deliverables",
+        "Timeline",
+        "Warranties",
+        "Indemnification",
+        "Limitation of Liability",
+        "Termination",
+        "Dispute Resolution"
+      ],
+      "Non-Disclosure Agreements": [
+        "Definition of Confidential Information",
+        "Obligations",
+        "Exceptions",
+        "Duration",
+        "Return of Materials",
+        "Remedies"
+      ],
+      "Partnership Agreements": [
+        "Capital Contribution",
+        "Profit Sharing",
+        "Management",
+        "Decision Making",
+        "Dissolution",
+        "Non-Compete"
+      ]
+    },
+    "Property Law": {
+      "Lease Agreements": [
+        "Property Description",
+        "Lease Period",
+        "Rent",
+        "Security Deposit",
+        "Maintenance",
+        "Subletting",
+        "Termination",
+        "Lock-in Period",
+        "Stamp Duty",
+        "Notice Period"
+      ],
+      "Sale Deeds": [
+        "Property Description",
+        "Sale Consideration",
+        "Payment Schedule",
+        "Possession Date",
+        "Title Warranty",
+        "Encumbrances",
+        "Registration",
+        "Stamp Duty"
+      ],
+      "Gift Deeds": [
+        "Donor Details",
+        "Donee Details",
+        "Property Description",
+        "Gift Declaration",
+        "Acceptance",
+        "Consideration",
+        "Registration"
+      ]
+    },
+    "Corporate Law": {
+      "Shareholder Agreements": [
+        "Share Capital",
+        "Voting Rights",
+        "Board Composition",
+        "Transfer Restrictions",
+        "Tag-Along Rights",
+        "Drag-Along Rights",
+        "Exit Mechanisms",
+        "Dispute Resolution"
+      ],
+      "Board Resolutions": [
+        "Meeting Notice",
+        "Quorum",
+        "Agenda Items",
+        "Voting",
+        "Approval of Actions",
+        "Execution"
+      ]
+    },
+    "Intellectual Property": {
+      "IP Assignment": [
+        "IP Description",
+        "Assignor/Assignee",
+        "Consideration",
+        "Warranties",
+        "Indemnification",
+        "Registration"
+      ],
+      "License Agreements": [
+        "Licensed IP",
+        "License Grant",
+        "Territory",
+        "Duration",
+        "Royalties",
+        "Termination",
+        "Sublicensing"
+      ]
+    }
+  }
+}

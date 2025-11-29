@@ -1,0 +1,30 @@
+{
+  "confidentiality_clauses": [
+    {
+      "clause_id": "CONF-001",
+      "type": "confidentiality",
+      "jurisdiction": "India",
+      "risk_level": "standard",
+      "title": "Basic Confidentiality Obligation",
+      "text": "The Receiving Party shall hold in confidence and not disclose to any third parties any Confidential Information disclosed by the Disclosing Party, except as expressly permitted herein. The Receiving Party shall use the same degree of care to protect the Confidential Information as it uses to protect its own confidential information, but in no event less than reasonable care.",
+      "notes": "Standard confidentiality clause for NDAs",
+      "precedent_source": "Indian Contract Act, 1872"
+    },
+    {
+      "clause_id": "CONF-002",
+      "type": "confidentiality",
+      "jurisdiction": "India",
+      "risk_level": "protective",
+      "title": "Comprehensive Confidentiality with Exceptions",
+      "text": "1. OBLIGATIONS: The Receiving Party shall: (a) maintain the confidentiality of all Confidential Information; (b) not disclose Confidential Information to any third party without prior written consent; (c) use Confidential Information solely for the Purpose; (d) limit access to employees on a need-to-know basis.\n\n2. EXCEPTIONS: Confidentiality obligations shall not apply to information that: (a) was publicly available prior to disclosure; (b) becomes publicly available through no fault of Receiving Party; (c) was rightfully in Receiving Party's possession prior to disclosure; (d) is independently developed; or (e) is required to be disclosed by law.",
+      "notes": "Detailed confidentiality with standard exceptions",
+      "precedent_source": "Standard NDA practice"
+    }
+  ],
+  "metadata": {
+    "last_updated": "2025-10-30",
+    "jurisdiction": "India",
+    "category": "confidentiality",
+    "total_clauses": 2
+  }
+}

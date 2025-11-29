@@ -1,0 +1,40 @@
+{
+  "indemnity_clauses": [
+    {
+      "clause_id": "IND-001",
+      "type": "indemnity",
+      "jurisdiction": "India",
+      "risk_level": "standard",
+      "title": "General Indemnity Clause",
+      "text": "The [INDEMNIFYING_PARTY] agrees to indemnify, defend, and hold harmless the [INDEMNIFIED_PARTY], its officers, directors, employees, and agents from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorney fees) arising out of or resulting from [INDEMNIFYING_PARTY]'s breach of this Agreement or negligent or willful misconduct.",
+      "notes": "Standard indemnity clause suitable for most commercial agreements",
+      "precedent_source": "Indian Contract Act, 1872 - Section 124"
+    },
+    {
+      "clause_id": "IND-002",
+      "type": "indemnity",
+      "jurisdiction": "India",
+      "risk_level": "protective",
+      "title": "Mutual Indemnity - Balanced",
+      "text": "Each party (the \"Indemnifying Party\") shall indemnify and hold harmless the other party (the \"Indemnified Party\") from and against all claims, damages, losses, and expenses, including reasonable attorney fees, arising out of or resulting from: (a) the Indemnifying Party's breach of any representation, warranty, or covenant under this Agreement; (b) the Indemnifying Party's negligence or willful misconduct; or (c) any third-party claim arising from the Indemnifying Party's performance under this Agreement.",
+      "notes": "Mutual indemnity suitable for partnerships and balanced relationships",
+      "precedent_source": "Standard commercial practice"
+    },
+    {
+      "clause_id": "IND-003",
+      "type": "indemnity",
+      "jurisdiction": "India",
+      "risk_level": "aggressive",
+      "title": "Broad Indemnity with IP Protection",
+      "text": "The [INDEMNIFYING_PARTY] shall indemnify, defend, and hold harmless the [INDEMNIFIED_PARTY] from any and all claims, demands, suits, losses, damages, costs, and expenses (including reasonable attorney fees and court costs) arising from: (a) any breach of this Agreement; (b) any intellectual property infringement claims; (c) any bodily injury or property damage; (d) any violation of applicable laws or regulations; and (e) any acts or omissions of [INDEMNIFYING_PARTY], its employees, agents, or contractors. This indemnification shall survive the termination or expiration of this Agreement.",
+      "notes": "Comprehensive indemnity with IP protection, suitable for technology/services agreements",
+      "precedent_source": "IT Act, 2000 - Section 43A, Copyright Act, 1957"
+    }
+  ],
+  "metadata": {
+    "last_updated": "2025-10-30",
+    "jurisdiction": "India",
+    "category": "indemnity",
+    "total_clauses": 3
+  }
+}

@@ -1,0 +1,38 @@
+# ===================================
+# MINIMAL REQUIREMENTS FOR AUTHENTICATION & CORE FEATURES
+# Python 3.13 Compatible - No C++ Compiler Needed
+# ===================================
+
+# CORE FLASK
+flask==3.0.0
+Flask-Cors==4.0.0
+python-dotenv==1.0.0
+
+# AUTHENTICATION
+flask-bcrypt==1.0.1
+flask-jwt-extended==4.7.1
+
+# DATABASE (PostgreSQL)
+psycopg2-binary  # Already installed: 2.9.11
+
+# DOCUMENT PROCESSING
+python-docx==1.1.0
+mammoth==1.6.0
+pypdf2==3.0.1
+pdfplumber==0.11.0
+
+# AZURE OPENAI
+openai==1.54.3
+azure-identity==1.19.0
+tiktoken==0.8.0
+tenacity==8.2.3
+
+# BASIC EMBEDDINGS (without chromadb)
+sentence-transformers==3.3.1
+
+# UTILITIES
+requests==2.32.3
+beautifulsoup4==4.12.3
+
+# LOGGING
+colorlog==6.9.0

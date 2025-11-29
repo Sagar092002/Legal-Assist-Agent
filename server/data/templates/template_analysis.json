@@ -1,0 +1,38 @@
+{
+  "Deed of Lease .docx": {
+    "jinja2_variables": [],
+    "bracket_variables": [],
+    "underscore_count": 0,
+    "sample_text": "Deed of Lease (for a Term of Years) Rent Agreement\n\nThis Deed of Lease is made at #1 this #2 day of #3, #18 between #4 of #5 hereinafter called 'The Lessor' of the One Part and #6 also of #7 hereinafter called 'The Lessee' of the Other Part.\nWHEREAS, the Lessor is absolutely seized and possessed of or otherwise well and sufficiently entitled to the land and premises described in the Schedule hereunder written.\nAND WHEREAS, the Lessor has agreed to grant to the Lessee a lease in respect of the sa"
+  },
+  "Deed-of-Family-Trust.docx": {
+    "jinja2_variables": [],
+    "bracket_variables": [],
+    "underscore_count": 0,
+    "sample_text": "                      \n\n\nDRAFT OF DEED OF FAMILY TRUST\nThis Deed of Trust made at.......................... this.......................... day of................ between (1)......................... (2)............................... (3)....................... (4).................... (5)................................ (6).................... (7)..................... all of..................... hereinafter referred to as the SETTLORS of the One Part and (I)................ (2)..................."
+  },
+  "Lease-Deed-(for-a-term-of-years)-Rent-Agreement.docx": {
+    "jinja2_variables": [],
+    "bracket_variables": [],
+    "underscore_count": 0,
+    "sample_text": "Draft of Deed of Lease (for a Term of Years) Rent Agreement\n\nThis Deed of Lease is made at..... this..... day of ...... between A of ..... hereinafter called 'The Lessor' of the One Part and B also of..... hereinafter called 'The Lessee' of the Other Part.\nWHEREAS, the Lessor is absolutely seized and possessed of or otherwise well and sufficiently entitled to the land and premises described in the Schedule hereunder written.\nAND WHEREAS, the Lessor has agreed to grant to the Lessee a lease in re"
+  },
+  "Legal-Notice-for-Non-Payment-of-Invoice.docx": {
+    "jinja2_variables": [],
+    "bracket_variables": [],
+    "underscore_count": 16,
+    "sample_text": "Legal Notice\nRef. No\u2026\u2026\u2026\u2026\u2026. Dated ____, __________\n\nREGD.A.D.\n\nLEGAL NOTICE\n\nTo,\n\n_____________\n\nDear Sir,\n\nPursuant to the instructions from and on behalf of my client ___________________, through its _____________, I do hereby serve you with the following Legal Notice: -\n\n1- That my client is a ___________ firm/individual under the name and style of M/s ______________________.\n\n2- That my client is engaged in the business of __________ of the ___ etc.\n\n3- That against your valid and confirmed o"
+  },
+  "Legal-Notice-for-Recovery-of-Friendly-Loan.docx": {
+    "jinja2_variables": [],
+    "bracket_variables": [],
+    "underscore_count": 16,
+    "sample_text": "Legal Notice\nRef. No\u2026\u2026\u2026\u2026\u2026. Dated ____, __________\n\nREGD.A.D.\n\nLEGAL NOTICE\n\nTo,\n\n_____________\n\nDear Sir,\n\nPursuant to the instructions from and on behalf of my client ___________________, through its _____________, I do hereby serve you with the following Legal Notice: -\n\n1- That my client is a ___________ firm/individual under the name and style of M/s ______________________.\n\n2- That my client is engaged in the business of __________ of the ___ etc.\n\n3- That against your valid and confirmed o"
+  },
+  "Legal-Notice-for-Recovery-of-Money.docx": {
+    "jinja2_variables": [],
+    "bracket_variables": [],
+    "underscore_count": 16,
+    "sample_text": "Legal Notice\nRef. No\u2026\u2026\u2026\u2026\u2026. Dated ____, __________\n\nREGD.A.D.\n\nLEGAL NOTICE\n\nTo,\n\n_____________\n\nDear Sir,\n\nPursuant to the instructions from and on behalf of my client ___________________, through its _____________, I do hereby serve you with the following Legal Notice: -\n\n1- That my client is a ___________ firm/individual under the name and style of M/s ______________________.\n\n2- That my client is engaged in the business of __________ of the ___ etc.\n\n3- That against your valid and confirmed o"
+  }
+}
