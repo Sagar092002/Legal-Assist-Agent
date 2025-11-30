@@ -185,5 +185,25 @@ def chat():
     response = get_document(user_input['user_chat'])
     return jsonify({'aiMessage': response})
 
+
+@app.route('/api/local-images/<filename>')
+def serve_local_image(filename):
+    try:
+        # Define the path to your local images directory
+        image_dir = r"C:\Users\asus\Documents\Python\legal document\Legal-Documentation-Assistant\Local Image"
+        file_path = os.path.join(image_dir, filename)
+        
+        # Check if file exists
+        if not os.path.exists(file_path):
+            return jsonify({'error': 'Image not found'}), 404
+            
+        return send_file(file_path, mimetype='image/jpeg')
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
