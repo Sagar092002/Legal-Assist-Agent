@@ -45,7 +45,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-cyan-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-cyan-50 py-12 px-4 mt-10">
       {/* Header Section */}
       <div className="text-center mb-5">
         <h1 className="text-5xl font-bold text-[#804bce] mb-14" style={{ fontFamily: "'DM Serif Display', serif" }}>
