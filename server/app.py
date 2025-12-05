@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, session
 import requests
 import MySQLdb
 from flask_cors import CORS
@@ -8,6 +8,8 @@ import psycopg2
 from dotenv import load_dotenv
 import os   
 import sys
+from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
@@ -21,15 +23,124 @@ from model.similarity import get_document
 load_dotenv()
 
 app = Flask(__name__)
+app.secret_key = os.getenv('SECRET_KEY', 'your-secret-key-change-in-production')
 
-# Configure CORS to allow requests from React frontend
-cors = CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+# Configure CORS to allow requests from React frontend with credentials
+cors = CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000", "supports_credentials": True}})
 
 # db = MySQLdb.Connect(host="containers-us-west-78.railway.app", port=5480,
 #                      user="root", passwd="F09DY9R7wJEsodY9LB1B", db="railway")
 db = psycopg2.connect(database=os.getenv('DATABASE_NAME'), user=os.getenv('DATABASE_USER'),
                         password=os.getenv('PASSWORD'), host=os.getenv('DATABASE_HOST'), port=os.getenv('DATABASE_PORT'), keepalives=1, keepalives_idle=30,
                         keepalives_interval=10, keepalives_count=5)
+
+# Authentication Routes
+
+@app.route('/api/signup', methods=['POST'])
+def signup():
+    try:
+        data = request.json
+        email = data.get('email')
+        password = data.get('password')
+        full_name = data.get('full_name', '')
+        
+        # Validate input
+        if not email or not password:
+            return jsonify({'error': 'Email and password are required'}), 400
+        
+        # Check if user already exists
+        cur = db.cursor()
+        cur.execute('SELECT email FROM users WHERE email = %s', [email])
+        existing_user = cur.fetchone()
+        
+        if existing_user:
+            cur.close()
+            return jsonify({'error': 'Email already registered'}), 409
+        
+        # Hash password
+        password_hash = generate_password_hash(password)
+        
+        # Insert new user
+        cur.execute(
+            'INSERT INTO users (email, password_hash, full_name, created_at) VALUES (%s, %s, %s, %s) RETURNING user_id',
+            [email, password_hash, full_name, datetime.now()]
+        )
+        user_id = cur.fetchone()[0]
+        db.commit()
+        cur.close()
+        
+        return jsonify({
+            'message': 'User registered successfully',
+            'user_id': user_id,
+            'email': email
+        }), 201
+        
+    except Exception as e:
+        print(f"Signup error: {str(e)}")
+        return jsonify({'error': 'Registration failed'}), 500
+
+
+@app.route('/api/login', methods=['POST'])
+def login():
+    try:
+        data = request.json
+        email = data.get('email')
+        password = data.get('password')
+        
+        # Validate input
+        if not email or not password:
+            return jsonify({'error': 'Email and password are required'}), 400
+        
+        # Get user from database
+        cur = db.cursor()
+        cur.execute(
+            'SELECT user_id, email, password_hash, full_name FROM users WHERE email = %s',
+            [email]
+        )
+        user = cur.fetchone()
+        
+        if not user:
+            cur.close()
+            return jsonify({'error': 'Invalid email or password'}), 401
+        
+        user_id, user_email, password_hash, full_name = user
+        
+        # Check password
+        if not check_password_hash(password_hash, password):
+            cur.close()
+            return jsonify({'error': 'Invalid email or password'}), 401
+        
+        # Update last login
+        cur.execute(
+            'UPDATE users SET last_login = %s WHERE user_id = %s',
+            [datetime.now(), user_id]
+        )
+        db.commit()
+        cur.close()
+        
+        # Set session
+        session['user_id'] = user_id
+        session['email'] = user_email
+        
+        return jsonify({
+            'message': 'Login successful',
+            'user': {
+                'user_id': user_id,
+                'email': user_email,
+                'full_name': full_name
+            }
+        }), 200
+        
+    except Exception as e:
+        print(f"Login error: {str(e)}")
+        return jsonify({'error': 'Login failed'}), 500
+
+
+@app.route('/api/logout', methods=['POST'])
+def logout():
+    session.clear()
+    return jsonify({'message': 'Logged out successfully'}), 200
+
 
 # # Get all the services
 
@@ -189,8 +300,9 @@ def chat():
 @app.route('/api/local-images/<filename>')
 def serve_local_image(filename):
     try:
-        # Define the path to your local images directory
-        image_dir = r"C:\Users\asus\Documents\Python\legal document\Legal-Documentation-Assistant\Local Image"
+        # Define the path to your local images directory (relative path)
+        parent_dir = os.path.dirname(current_dir)
+        image_dir = os.path.join(parent_dir, "Local Image")
         file_path = os.path.join(image_dir, filename)
         
         # Check if file exists
